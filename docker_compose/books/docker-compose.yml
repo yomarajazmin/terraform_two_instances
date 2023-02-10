@@ -1,0 +1,8 @@
+version: '3'
+services:
+
+  kanban-postgres:
+    image: yomarajazmin/books-restapi:1.3
+    container_name: books-restapi
+    ports:
+      - 3000:3000
