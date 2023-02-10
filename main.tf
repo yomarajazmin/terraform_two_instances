@@ -148,8 +148,8 @@ resource "aws_instance" "books" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo git clone https://github.com/yomarajazmin/terraform_example.git",
-      "cd terraform_example",
+      "sudo git clone https://github.com/yomarajazmin/terraform_two_instances.git",
+      "cd terraform_two_instances/docker_compose",
       "cd books",
       "sudo docker-compose up -d"
     ]
@@ -179,9 +179,9 @@ resource "aws_instance" "kanbanexample" {
   provisioner "remote-exec" {
 
     inline = [
-      "sudo git clone https://github.com/yomarajazmin/terraform_example.git",
-      "cd terraform_example",
-      "cd app",
+      "sudo git clone https://github.com/yomarajazmin/terraform_two_instances.git",
+      "cd terraform_two_instances/docker_compose",
+      "cd kanban",
       "sudo docker-compose up -d"
     ]
     connection {
